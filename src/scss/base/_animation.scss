@@ -1,0 +1,23 @@
+@keyframes arrow {
+    0% {
+        transform: translate(0);
+    }
+    70% {
+        transform: translate(20px, -20px);
+    }
+    100% {
+        transform: translate(20px, -20px);
+    }
+}
+
+@keyframes arrowUp {
+    0% {
+        transform: translate(-50%, 0) rotate(-45deg);
+    }
+    50% {
+        transform: translate(-50%, -245%) rotate(-45deg);
+    }
+    100% {
+        transform: translate(-50%, -245%) rotate(-45deg);
+    }
+}

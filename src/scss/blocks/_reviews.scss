@@ -1,0 +1,73 @@
+.reviews {
+    width: 100%;
+    padding: 120px;
+    background: #f5f5f5;
+
+    &__wrapper {
+        // width: 1252px;
+        display: flex;
+        gap: 175px;
+        overflow: hidden;
+        margin-top: 55px;
+    }
+
+    &__item {
+        width: 1252px;
+        // flex: 0 0 100%;
+    }
+
+    &__text {
+        display: block;
+        font-size: 96px;
+        line-height: 110%;
+        letter-spacing: -0.02em;
+        margin-bottom: 48px;
+        margin-top: 25px;
+        position: relative;
+        z-index: 5;
+        &::after {
+            content: '';
+            display: block;
+            width: 145px;
+            height: 100px;
+            background: url(../img/review/orange-quote.png);
+            z-index: -1;
+            position: absolute;
+            top: -29px;
+            left: -10px;
+        }
+    }
+
+    &__account {
+        display: flex;
+        gap: 32px;
+        align-items: center;
+    }
+
+    &__avatar {
+        border-radius: 64px;
+        width: 80px;
+        height: 120px;
+    }
+
+    &__name {
+        font-weight: 400;
+        font-size: 34px;
+        line-height: 120%;
+        letter-spacing: 0.01em;
+    }
+
+    &__label {
+        &::before {
+            background: url(../img/icons/quote.svg);
+        }
+    }
+}
+
+.slick-slide {
+    margin: 0 175px;
+    transition: .5s all;
+}
+.slick-list {
+    margin: 0 -10px;
+}

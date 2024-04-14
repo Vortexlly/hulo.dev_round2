@@ -1,0 +1,78 @@
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    border-radius: 40px;
+    border: 0;
+    padding: 16px 20px;
+    width: 238px;
+    height: 56px;
+    background: $main-color;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    &__text {
+        font-weight: 500;
+        font-size: 14px;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+        color: #fff;
+        z-index: 12;
+        transition: .5s all;
+    }
+    &__circle {
+        display: block;
+        border-radius: 40px;
+        width: 24px;
+        height: 24px;
+        background: #ff3c00;
+        z-index: 10;
+        transition: .4s ease all;
+    }
+    &__arrow {
+        width: 24px;
+        height: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 60%;
+        right: 30px;
+        transform: translateY(-50%);
+        overflow: hidden;
+        z-index: 11;
+        transition: .4s ease all;
+        svg {
+            width: 11px;
+            height: 10px;
+            color: #FF3C00;
+            opacity: 0;
+            transition: .5s ease all;
+            z-index: 12;
+        }
+        &_down2 {
+            position: absolute;
+            top: 27px;
+            left: -14px;
+        }
+    }
+    &:hover {
+        .btn__text {
+            color: $main-color;
+            margin-left: 8px;
+        }
+        .btn__circle {
+            transform: scale(20);
+        }
+        .btn__arrow {
+            top: 50%;
+            right: 20px;
+            svg {
+                color: $main-color;
+                opacity: 1;
+                animation: arrow 1.4s ease .4s infinite forwards;
+            }
+        }
+    }
+}

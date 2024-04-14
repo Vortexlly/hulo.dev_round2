@@ -1,0 +1,18 @@
+@mixin btn-hover() {
+    .btn__text {
+        color: $main-color;
+        margin-left: 8px;
+    }
+    .btn__circle {
+        transform: scale(20);
+    }
+    .btn__arrow {
+        top: 50%;
+        right: 20px;
+        svg {
+            color: $main-color;
+            opacity: 1;
+            animation: arrow 1.4s ease-in-out .4s infinite forwards;
+        }
+    }
+}

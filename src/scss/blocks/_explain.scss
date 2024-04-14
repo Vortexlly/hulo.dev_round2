@@ -1,0 +1,49 @@
+.explain {
+    min-height: 1588px;
+    padding: 114px 0 0 0;
+    position: relative;
+
+    &__label {
+        display: flex;
+        flex-direction: column;
+        &::before {
+            background: url(../img/icons/circle.svg);
+        }
+    }
+
+    &__title {
+        width: 60%;
+        margin: 0 auto;
+        margin-top: 80px;
+        font-weight: 400;
+        font-size: 96px;
+        line-height: 110%;
+        letter-spacing: -0.02em;
+        text-align: center;
+        color: $main-color;
+        span {
+            font-style: italic;
+        }
+        &_vector {
+            position: relative;
+            &::after {
+                content: '';
+                display: block;
+                width: 120%;
+                height: 110%;
+                background: url(../img/red-vector2.svg) no-repeat;
+                position: absolute;
+                top: 8px;
+                left: -20px;
+                z-index: -1;
+            }
+        }
+    }
+
+    &__bg {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        z-index: -1;
+    }
+}
