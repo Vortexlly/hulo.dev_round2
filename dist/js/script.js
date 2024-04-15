@@ -1,3 +1,7 @@
+AOS.init({
+	duration: 1000,
+});
+
 // Smooth scroll
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -30,26 +34,7 @@ $('.reviews__wrapper').slick({
     pauseOnHover: false,
     autoplaySpeed: 6000,
     speed: 5000,
-    responsive: [
-		{
-			breakpoint: 768,
-			settings: {
-			arrows: false,
-			centerMode: true,
-			centerPadding: '40px',
-			slidesToShow: 3
-			}
-		},
-		{
-			breakpoint: 480,
-			settings: {
-			arrows: false,
-			centerMode: true,
-			centerPadding: '40px',
-			slidesToShow: 1
-			}
-		}
-	]
+	draggable: false
 });
 
 // Input error 
@@ -62,8 +47,9 @@ const inputMsg = document.createElement('div');
 inputMsg.textContent = 'Please enter the correct email';
 inputMsg.classList.add('contact__msg')
 
-inputBtn.addEventListener('click', () => {
+inputBtn.addEventListener('click', e => {
 	if (inputArea.value === '') {
+		e.preventDefault();
 		inputForm.appendChild(inputMsg);
 		inputArea.classList.add('contact__input_error');
 		setTimeout(() => {
@@ -72,3 +58,26 @@ inputBtn.addEventListener('click', () => {
 		}, 6000)
 	}
 })
+
+// Hamburger script
+
+const hamburger = document.querySelector('.header__hamburger'),
+	  menu = document.querySelector('.header__nav'),
+	  menuItem = document.querySelectorAll('.header__link'),
+	  body = document.querySelector('body');
+
+hamburger.addEventListener('click', () => {
+	body.classList.toggle('overflow');
+	hamburger.classList.toggle('header__hamburger_active');
+	menu.classList.toggle('header__nav_active');
+});
+
+menuItem.forEach(item => {
+	item.addEventListener('click', () => {
+		if (hamburger.classList.contains('header__hamburger_active')) {
+			hamburger.classList.remove('header__hamburger_active');
+			menu.classList.remove('header__nav_active');
+			body.classList.remove('overflow');
+		}
+	})
+});

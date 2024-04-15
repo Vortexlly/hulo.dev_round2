@@ -9,41 +9,48 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.min.css">
     <title>PIPI-POOPOO</title>
 </head>
 <body>
     <header id="header" class="header">
         <h1 class="header__logo">PIPI-POOPOO</h1>
-            <nav class="header__nav">
-                <a href="#about" class="header__link">About us</a>
-                <a href="#services" class="header__link">Services</a>
-                <a href="#portfolio" class="header__link">Our work</a>
-                <a href="#footer" class="header__link">Blog</a>
-            </nav>
-            <div class="header__buttons">
-                <a href="#" class="header__instagram">
-                    <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 5.192A4.8 4.8 0 005.193 10 4.8 4.8 0 0010 14.807 4.8 4.8 0 0014.807 10 4.8 4.8 0 0010 5.192zm0 7.932A3.13 3.13 0 016.876 10 3.13 3.13 0 0110 6.875 3.13 3.13 0 0113.124 10 3.13 3.13 0 0110 13.124zm5.004-9.249a1.122 1.122 0 100 2.246 1.12 1.12 0 001.037-1.553 1.122 1.122 0 00-1.037-.693zM19.37 10c0-1.294.012-2.576-.06-3.868-.073-1.5-.415-2.83-1.512-3.928C16.698 1.105 15.37.765 13.87.692c-1.294-.072-2.576-.06-3.868-.06-1.293 0-2.575-.012-3.867.06-1.5.073-2.831.415-3.928 1.512-1.1 1.1-1.439 2.428-1.512 3.928C.623 7.426.635 8.708.635 10c0 1.29-.012 2.575.06 3.867.073 1.5.415 2.831 1.512 3.928 1.1 1.1 2.428 1.439 3.928 1.512 1.294.072 2.576.06 3.867.06 1.294 0 2.576.012 3.867-.06 1.5-.073 2.832-.415 3.929-1.512 1.099-1.1 1.439-2.428 1.511-3.928.075-1.292.061-2.574.061-3.867zm-2.062 5.526A2.977 2.977 0 0116.6 16.6a2.99 2.99 0 01-1.073.708c-1.233.49-4.16.38-5.527.38-1.366 0-4.296.11-5.529-.377a2.98 2.98 0 01-1.073-.708 2.999 2.999 0 01-.708-1.074c-.488-1.235-.378-4.162-.378-5.528 0-1.367-.11-4.297.378-5.53a2.96 2.96 0 01.708-1.073A3.03 3.03 0 014.47 2.69c1.233-.487 4.163-.377 5.529-.377 1.366 0 4.296-.11 5.529.377.427.171.745.378 1.073.708.33.33.537.647.708 1.074.488 1.232.378 4.162.378 5.529 0 1.366.11 4.293-.38 5.526z" fill="$main-color"/></svg>
-                </a>
-                <button class="btn header__chat">
-                    <p class="btn__text">LET`S CHAT</p>
-                    <div class="btn__circle"></div>
-                    <div class="btn__arrow">
-                        <svg class="btn__arrow_down1" width="11" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0v1h6.295L.5 9.295l.705.705L9.5 1.705V8h1V0h-8z" fill="currentColor"/></svg>
-                        <svg class="btn__arrow_down2" width="11" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0v1h6.295L.5 9.295l.705.705L9.5 1.705V8h1V0h-8z" fill="#1d201f"/></svg>
-                    </div>
-                </button>
-            </div>
+        <div class="header__hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="header__nav">
+            <h2 class="header__logo header__logo_nav">PIPI-POOPOO</h2>
+            <a href="#about" class="header__link">About us</a>
+            <a href="#services" class="header__link">Services</a>
+            <a href="#portfolio" class="header__link">Our work</a>
+            <a href="#footer" class="header__link">Blog</a>
+        </nav>
+        <div class="header__buttons">
+            <a href="#" class="header__instagram">
+                <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 5.192A4.8 4.8 0 005.193 10 4.8 4.8 0 0010 14.807 4.8 4.8 0 0014.807 10 4.8 4.8 0 0010 5.192zm0 7.932A3.13 3.13 0 016.876 10 3.13 3.13 0 0110 6.875 3.13 3.13 0 0113.124 10 3.13 3.13 0 0110 13.124zm5.004-9.249a1.122 1.122 0 100 2.246 1.12 1.12 0 001.037-1.553 1.122 1.122 0 00-1.037-.693zM19.37 10c0-1.294.012-2.576-.06-3.868-.073-1.5-.415-2.83-1.512-3.928C16.698 1.105 15.37.765 13.87.692c-1.294-.072-2.576-.06-3.868-.06-1.293 0-2.575-.012-3.867.06-1.5.073-2.831.415-3.928 1.512-1.1 1.1-1.439 2.428-1.512 3.928C.623 7.426.635 8.708.635 10c0 1.29-.012 2.575.06 3.867.073 1.5.415 2.831 1.512 3.928 1.1 1.1 2.428 1.439 3.928 1.512 1.294.072 2.576.06 3.867.06 1.294 0 2.576.012 3.867-.06 1.5-.073 2.832-.415 3.929-1.512 1.099-1.1 1.439-2.428 1.511-3.928.075-1.292.061-2.574.061-3.867zm-2.062 5.526A2.977 2.977 0 0116.6 16.6a2.99 2.99 0 01-1.073.708c-1.233.49-4.16.38-5.527.38-1.366 0-4.296.11-5.529-.377a2.98 2.98 0 01-1.073-.708 2.999 2.999 0 01-.708-1.074c-.488-1.235-.378-4.162-.378-5.528 0-1.367-.11-4.297.378-5.53a2.96 2.96 0 01.708-1.073A3.03 3.03 0 014.47 2.69c1.233-.487 4.163-.377 5.529-.377 1.366 0 4.296-.11 5.529.377.427.171.745.378 1.073.708.33.33.537.647.708 1.074.488 1.232.378 4.162.378 5.529 0 1.366.11 4.293-.38 5.526z" fill="$main-color"/></svg>
+            </a>
+            <button class="btn header__chat">
+                <p class="btn__text">LET`S CHAT</p>
+                <div class="btn__circle"></div>
+                <div class="btn__arrow">
+                    <svg class="btn__arrow_down1" width="11" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0v1h6.295L.5 9.295l.705.705L9.5 1.705V8h1V0h-8z" fill="currentColor"/></svg>
+                    <svg class="btn__arrow_down2" width="11" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0v1h6.295L.5 9.295l.705.705L9.5 1.705V8h1V0h-8z" fill="#1d201f"/></svg>
+                </div>
+            </button>
+        </div>
     </header>
 
     <section class="promo">
         <div class="promo__container">
-            <h1 class="promo__text promo__text_1">a full-service design & marketing agency.</h1>
-            <p class="promo__text promo__text_2">Grow your business without adding more to your plate. <span>You deserve support.</span></p>
+            <p data-aos="fade-down" data-aos-delay="1000" class="promo__text promo__text_1">a full-service design & marketing agency.</p>
+            <p data-aos="fade-down" data-aos-delay="1000" class="promo__text promo__text_2">Grow your business without adding more to your plate. <span>You deserve support.</span></p>
             <div class="promo__wrapper">
-                <p class="promo__bigtext">CHECK</p>
-                <p class="promo__bigtext">MARKETING</p>
-                <p class="promo__bigtext">OFF YOUR LIST.</p>
+                <p data-aos="fade-left" class="promo__bigtext">CHECK</p>
+                <p data-aos="fade-left" data-aos-delay="500" class="promo__bigtext">MARKETING</p>
+                <p data-aos="fade-left" data-aos-delay="1000" class="promo__bigtext">OFF YOUR LIST.</p>
             </div>
             <button class="btn promo__btn">
                 <p class="btn__text">TALK TO AN EXPERT</p>
@@ -74,11 +81,11 @@
 
     <section id="about" class="about">
         <div class="about__container">
-            <h2 class="about__title">YOU HAVE <span>a lot</span> GOING ON</h2>
+            <h2 data-aos="fade-down" class="about__title">YOU HAVE <span>a lot</span> GOING ON</h2>
             <div class="label about__label">ABOUT US</div>
             <div class="about__wrapper">
-                <div class="about__subtitle">Running a business means <br> <span>wearing a lot of hats.</span></div>
-                <div class="about__text">
+                <div data-aos-delay="300" data-aos="fade-down" class="about__subtitle">Running a business means <span>wearing a lot of hats.</span></div>
+                <div data-aos-delay="600" data-aos="fade-right" class="about__text">
                     Do you have a million ideas for growth, but don’t have the bandwidth to turn them into a reality?
                     <button class="btn about__btn">
                         <p class="btn__text">Contact Us</p>
@@ -89,7 +96,7 @@
                         </div>
                     </button>
                 </div>
-                <div class="about__text">That’s where we come in. We want to create a strategic communication plan and save you time by executing it for you. You need to do what you do best: focus on the parts of your entrepreneurial journey that inspire you. Leave the rest to us.</div>
+                <div data-aos-delay="600" data-aos="fade-left" class="about__text">That’s where we come in. We want to create a strategic communication plan and save you time by executing it for you. You need to do what you do best: focus on the parts of your entrepreneurial journey that inspire you. Leave the rest to us.</div>
             </div>
         </div>
     </section>
@@ -101,9 +108,9 @@
     </section>
 
     <section id="services" class="services">
-        <a href="#" class="services__item">
+        <a data-aos="fade-right" href="#" class="services__item">
             <h3 class="services__subtitle">Our 1-day design services</h3>
-            <h2 class="services__title">I need a visual revamp <br> asap</h2>
+            <h2 class="services__title">I need a visual revamp asap</h2>
             <div class="services__img-block">
                 <img src="img/services/services-card1.jpg" alt="services-img1" class="services__img">
                 <img src="img/services/services-card1_back.jpg" alt="services-img1-back" class="services__img_back">
@@ -117,7 +124,7 @@
                 </div>
             </button>
         </a>
-        <a href="#" class="services__item">
+        <a data-aos="fade-right" data-aos-delay="500" href="#" class="services__item">
             <h3 class="services__subtitle">Our retainer services</h3>
             <h2 class="services__title">I need an external marketing team</h2>
             <div class="services__img-block">
@@ -133,7 +140,7 @@
                 </div>
             </button>
         </a>
-        <a href="#" class="services__item">
+        <a data-aos="fade-right" data-aos-delay="1000" href="#" class="services__item">
             <h3 class="services__subtitle">Let’s work together</h3>
             <h2 class="services__title">I Need to increase online presence</h2>
             <div class="services__img-block">
@@ -155,7 +162,7 @@
         <div class="process__container">
             <div class="label process__label">OUR PROCESS</div>
             <div class="process__wrapper">
-                <div class="process__item">
+                <div data-aos="fade-left" class="process__item">
                     <div class="process__number">01</div>
                     <div class="process__content">
                         <div class="process__subtitle">strategic PLANNING</div>
@@ -178,7 +185,7 @@
                         <span></span>
                     </div>
                 </div>
-                <div class="process__item">
+                <div data-aos="fade-left" class="process__item">
                     <div class="process__number">02</div>
                     <div class="process__content">
                         <div class="process__subtitle">creative EXECUTION</div>
@@ -201,7 +208,7 @@
                         <span></span>
                     </div>
                 </div>
-                <div class="process__item">
+                <div data-aos="fade-left" class="process__item">
                     <div class="process__number">03</div>
                     <div class="process__content">
                         <div class="process__subtitle">strategic PLANNING</div>
@@ -230,7 +237,7 @@
 
     <section id="portfolio" class="portfolio">
         <div class="portfolio__container">
-            <div class="portfolio__big-block">
+            <div data-aos="fade-left" class="portfolio__big-block">
                 <div class="portfolio__title-block">
                     <div class="label portfolio__label">SELECTED WORK</div>
                     <h2 class="portfolio__title">Sit nam egestas nullam nulla. Sed nisi arcu et blandit.</h2>
@@ -250,7 +257,7 @@
                     <h4 class="portfolio__name">Valerie Wheeler</h4>
                 </a>
             </div>
-            <div class="portfolio__big-block">
+            <div data-aos="fade-right" class="portfolio__big-block">
                 <a href="#" id="portfolioWork3" class="portfolio__item">
                     <div class="portfolio__img">
                         <img src="img/portfolio/portfolio-card3.jpg" alt="portfolio-img3">
@@ -266,7 +273,7 @@
                     <h4 class="portfolio__name">Social Blue Print</h4>
                 </a>
             </div>
-            <div class="portfolio__big-block">
+            <div data-aos="fade-left" class="portfolio__big-block">
                 <a href="#" id="portfolioWork5" class="portfolio__item">
                     <div class="portfolio__img">
                         <img src="img/portfolio/portfolio-card5.jpg" alt="portfolio-img5">
@@ -333,7 +340,7 @@
                 <div>
                     <p class="contact__text">Get expert eyes on your brand + website. One of our creative strategies will take a look at your brand and give you your best next steps to improve your online presence to increase conversions. From there, we will offer you the next steps on how to engage our team, or you can take our free advice and grow your business yourself.</p>
                     <form action="" class="contact__form">
-                        <input class="contact__input" type="email" id="email" name="email" placeholder="Email" required>
+                        <input class="contact__input" type="email" id="email" name="email" placeholder="Email">
                         <button class="btn contact__btn">
                             <p class="btn__text">SUBMIT</p>
                             <div class="btn__circle"></div>
@@ -401,6 +408,7 @@
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

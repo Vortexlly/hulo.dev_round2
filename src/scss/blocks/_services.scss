@@ -42,6 +42,9 @@
     }
 
     &__title {
+        height: 288px;
+        display: flex;
+        align-items: center;
         font-weight: 400;
         font-size: 60px;
         line-height: 120%;
@@ -58,17 +61,98 @@
     }
 
     &__img {
+        width: 100%;
         border-radius: 8px;
         transition: .35s all cubic-bezier(0.25, 0.1, 0.25, 1.15);
         position: relative;
         z-index: 10;
         &_back {
+            width: 100%;
             border-radius: 8px;
             position: absolute;
             top: 0;
             left: 0;
             z-index: 5;
             transition: .35s all cubic-bezier(0.25, 0.1, 0.25, 1.15);
+        }
+    }
+}
+
+@media (max-width: 1600px) {
+    .services {
+        &__title {
+            height: 160px;
+            font-size: 47px;
+        }
+
+        &__item {
+            height: 764px;
+            &:hover {
+                .services__img {
+                    transform: scale(.9);
+                    &_back {
+                        transform: rotate(-8deg);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1439px) {
+    .services {
+        &__title {
+            font-size: 41px;
+        }
+    }
+}
+
+@media (max-width: 1279px) {
+    .services {
+        flex-direction: column;
+        &__item {
+            width: 100%;
+            &:first-child, &:last-child  {
+                border-right: 0;
+                border-left: 0;
+            }
+        }
+        &__title {
+            font-size: 70px;
+        }
+    }
+}
+
+@media (max-width: 960px) {
+    .services {
+        &__subtitle {
+            font-size: 24px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .services {
+        &__title {
+            font-size: 43px;
+        }
+        &__subtitle {
+            font-size: 20px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .services {
+        &__item {
+            height: 700px;
+        }
+        &__title {
+            font-size: 38px;
+        }
+        &__img-block {
+            width: 100%;
+            height: initial;
         }
     }
 }

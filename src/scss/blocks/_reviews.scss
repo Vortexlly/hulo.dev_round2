@@ -30,7 +30,7 @@
             display: block;
             width: 145px;
             height: 100px;
-            background: url(../img/review/orange-quote.png);
+            background: url(../img/review/orange-quote.png) center center/contain no-repeat;
             z-index: -1;
             position: absolute;
             top: -29px;
@@ -59,7 +59,7 @@
 
     &__label {
         &::before {
-            background: url(../img/icons/quote.svg);
+            background: url(../img/icons/quote.svg) center center/contain no-repeat;
         }
     }
 }
@@ -70,4 +70,107 @@
 }
 .slick-list {
     margin: 0 -10px;
+}
+
+@media (max-width: 1600px) {
+    .reviews {
+        &__item {
+            width: 1180px;
+        }
+
+        &__text {
+            font-size: 84px;
+        }
+    }
+}
+
+@media (max-width: 1439px) {
+    .reviews {
+        &__item {
+            width: 1000px;
+        }
+    }
+}
+
+@media (max-width: 1279px) {
+    .reviews {
+        &__item {
+            width: 700px;
+        }
+
+        &__text {
+            font-size: 54px;
+        }
+
+        &__name {
+            font-size: 26px;
+        }
+    }
+}
+
+@media (max-width: 960px) {
+    .reviews {
+        padding: 60px;
+        &__item {
+            width: 500px;
+        }
+
+        &__text {
+            font-size: 40px;
+            &::after {
+                width: 60px;
+                height: 100px;
+                top: -43px;
+                left: -1px;
+            }
+        }
+
+        &__name {
+            font-size: 22px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .reviews {
+        padding: 60px;
+
+        &__wrapper {
+            margin-top: 0;
+        }
+        &__item {
+            width: 300px;
+        }
+
+        &__text {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        &__name {
+            font-size: 16px;
+        }
+
+        &__avatar {
+            width: initial;
+            height: 55px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .reviews {
+        &__item {
+            width: 250px;
+        }
+
+        &__text {
+            &::after {
+                width: 30px;
+                height: 100px;
+                top: -47px;
+                left: 0px;
+            }
+        }
+    }
 }

@@ -1,5 +1,6 @@
 .promo {
     width: 100%;
+    transition: .5s all;
 
     &__container {
         width: 87.5%;
@@ -52,5 +53,126 @@
         position: absolute;
         bottom: 74px;
         padding: 16px 18px;
+    }
+}
+
+@media (max-width: 1600px) {
+    .promo {
+        &__wrapper {
+            width: 75%;
+        }
+
+        &__bigtext {
+            font-size: 130px;
+        }
+    }
+}
+
+@media (max-width: 1439px) {
+    .promo {
+        &__container {
+            min-height: 490px;
+        }
+
+        &__bigtext {
+            font-size: 110px;
+        }
+
+        &__text {
+            &_2 {
+                right: 5%;
+            }
+        }
+        
+        &__wrapper {
+            overflow: hidden;
+        }
+    }
+}
+
+@media (max-width: 1279px) {
+    .promo {
+        &__container {
+            padding: 40px 0;
+        }
+
+        &__wrapper {
+            float: initial;
+            width: 90%;
+            margin-top: 20px;
+        }
+
+        &__bigtext {
+            font-size: 80px;
+            &:not(.promo__bigtext:first-child) {
+                float: initial;
+            }
+        }
+
+        &__text {
+            width: 276px;
+            font-size: 18px;
+            right: 5%;
+            &_1 {
+                bottom: 74px;
+            }
+            &_2 {
+                top: initial;
+            }
+        }
+    }
+}
+
+@media (max-width: 960px) {
+    .promo {
+        &__text {
+            right: -5%;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .promo {
+        &__wrapper {
+            margin: 0 auto;
+            margin-bottom: 100px;
+        }
+
+        &__bigtext {
+            font-size: 66px;
+            text-align: center;
+        }
+
+        &__text {
+            width: 208px;
+            font-size: 16px;
+            bottom: 115px;
+            &_1 {
+                left: 0;
+            }
+            &_2 {
+                bottom: 104px;
+            }
+        }
+
+        &__btn {
+            left: 50%;
+            bottom: 20px;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .promo {
+        &__bigtext {
+            font-size: 45px;
+        }
+
+        &__text {
+            &_1 {
+                bottom: 195px;                
+            }
+        }
     }
 }

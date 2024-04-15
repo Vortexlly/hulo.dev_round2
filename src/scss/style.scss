@@ -11,6 +11,10 @@
     font-family: "Plus Jakarta Sans", sans-serif;
 }
 
+.overflow {
+    overflow: hidden
+}
+
 @import 'blocks/btn';
 @import 'blocks/label';
 

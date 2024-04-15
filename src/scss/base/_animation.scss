@@ -21,3 +21,18 @@
         transform: translate(-50%, -245%) rotate(-45deg);
     }
 }
+
+@keyframes inputError {
+    0% {
+        transform: translate(-50%, 0);
+    }
+    25% {
+        transform: translate(-50%, 5px);
+    }
+    75% {
+        transform: translate(-50%, -5px);
+    }
+    100% {
+        transform: translate(-50%, 0);
+    }
+}

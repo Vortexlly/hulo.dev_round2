@@ -12,7 +12,7 @@
 
     &__label {
         &::before {
-            background: url(../img/icons/star2.svg);
+            background: url(../img/icons/star2.svg) center center/contain no-repeat;
         }
     }
 
@@ -21,6 +21,7 @@
         display: inline-flex;
         flex-direction: column;
         gap: 4rem;
+        overflow: hidden;
     }
 
     &__item {
@@ -90,6 +91,84 @@
             height: 4px;
             border-radius: 100%;
             background: #fff;
+        }
+    }
+}
+
+@media (max-width: 1439px) {
+    .process {
+        &__container {
+            padding: 60px 0;
+        }
+        &__label {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 1279px) {
+    .process {
+        &__container {
+            width: 100%;
+            justify-content: center;
+        }
+        &__wrapper {
+            width: 95%;
+        }
+    }
+}
+
+@media (max-width: 960px) {
+    .process {
+        &__item {
+            gap: 20px;
+            flex-direction: column;
+        }
+
+        &__content {
+            width: 100%;
+        }
+
+        &__info {
+            display: none;
+        }
+
+        &__title {
+            font-size: 46px;
+            margin-left: 32px;
+        }
+
+        &__descr {
+            font-size: 22px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .process {
+        &__title {
+            font-size: 35px;
+        }
+
+        &__descr {
+            font-size: 18px;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .process {
+        &__item {
+            align-items: center;
+        }
+        &__subtitle {
+            text-align: center;
+        }
+        &__title {
+            font-size: 25px;
+        }
+        &__descr {
+            font-size: 15px;
         }
     }
 }
