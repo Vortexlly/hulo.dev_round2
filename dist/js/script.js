@@ -1,5 +1,6 @@
 AOS.init({
 	duration: 1000,
+	offset: '80px',
 });
 
 // Smooth scroll

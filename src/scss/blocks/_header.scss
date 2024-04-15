@@ -55,12 +55,14 @@
     }
 
     &__instagram {
+        display: block;
         width: 20px;
         height: 20px;
         position: absolute;
         left: -50px;
         top: 50%;
         transform: translateY(-50%);
+        font-size: 0;
     }
 
     &__hamburger {
